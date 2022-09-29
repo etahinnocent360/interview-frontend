@@ -9,6 +9,7 @@ import './square.css'
 import axios from 'axios'
 import { baseURL } from '../../../base/config'
 import { faTrash } from '@fortawesome/sharp-solid-svg-icons'
+import Loading from '../../../loader/loarding'
 export default function SquareDetail() {
     const [option, setOption] = useState()
     const [data2, setWidth] = useState()
@@ -16,7 +17,7 @@ export default function SquareDetail() {
     const [name, setName] = useState()
     const [units, setUnits] = useState()
     const dispatch = useDispatch()
-    const {square} = useSelector((store) =>store.allcircles)
+    const {square, isLoading} = useSelector((store) =>store.allcircles)
     const width = Number(data2)
     const height = Number(data1)
     console.log(square,'ddsdsd')
@@ -38,7 +39,9 @@ export default function SquareDetail() {
             units
         })
     }
-
+if(isLoading){
+  return <Loading/>
+}
 if(option === 'perimeter'){
     return(
         <div className='square'>   

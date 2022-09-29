@@ -1,12 +1,14 @@
+import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTriangle } from '@fortawesome/sharp-solid-svg-icons'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { createTriangle, getSquare, getTriangles } from '../../../app/reducers/circleSlice'
+import Loading from '../../../loader/loarding'
 
 export default function Triangle() {
-    const { triangles} = useSelector((store) => store.allcircles)
+    const { triangles, isLoading} = useSelector((store) => store.allcircles)
     const [data1, setHeight] = useState()
     const [data2, setBase] = useState()
     const [data3, setSideA] = useState()
@@ -33,6 +35,9 @@ export default function Triangle() {
         })).then(() => {
           window.location.reload()
         })
+       }
+       if(isLoading){
+        return <Loading/>
        }
   return (
     <div className='triangle'>
@@ -64,6 +69,9 @@ export default function Triangle() {
         
       </div>
     </div>
+    <Link to={'/playground/'}>
+     <FontAwesomeIcon className='back-arrow' icon={faArrowAltCircleLeft}/>
+     </Link>
 </div>
   )
 }

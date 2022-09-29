@@ -6,8 +6,9 @@ import './rectangle.css'
 import { getRectangles, createRectangle } from '../../../app/reducers/circleSlice'
 import { faRectangle } from '@fortawesome/sharp-solid-svg-icons'
 import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
+import Loading from '../../../loader/loarding'
 export default function Rectangle() {
-  const { rectangles} = useSelector((store) => store.allcircles)
+  const { rectangles, isLoading} = useSelector((store) => store.allcircles)
   const [data1, setHeight] = useState()
   const [data2, setWidth] = useState()
   const [name, setName] = useState()
@@ -29,6 +30,9 @@ console.log(rectangles,'form component')
   })).then(() => {
     window.location.reload()
   })
+ }
+ if(isLoading){
+  return <Loading/>
  }
   return (
 <div className='new-rectangle'>

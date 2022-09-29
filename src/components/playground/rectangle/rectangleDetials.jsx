@@ -9,6 +9,7 @@ import axios from 'axios'
 import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons'
 import { baseURL } from '../../../base/config'
 import { faRectangle, faTrash } from '@fortawesome/sharp-solid-svg-icons'
+import Loading from '../../../loader/loarding'
 export default function RectangleDetails() {
     const [option, setOption] = useState()
     const [data2, setWidth] = useState()
@@ -16,7 +17,7 @@ export default function RectangleDetails() {
     const [name, setName] = useState()
     const [units, setUnits] = useState()
     const dispatch = useDispatch()
-    const { rectangle } = useSelector((store) => store.allcircles)
+    const { rectangle, isLoading } = useSelector((store) => store.allcircles)
     const width = Number(data2)
     const height = Number(data1)
     console.log(rectangle, 'ddsdsd')
@@ -39,6 +40,9 @@ export default function RectangleDetails() {
         }).then(() => {
             window.location.reload()
         })
+    }
+    if(isLoading){
+        return <Loading/>
     }
 
     if (option === 'perimeter') {

@@ -1,14 +1,16 @@
+import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPi, faTrash, faTriangle } from '@fortawesome/sharp-solid-svg-icons'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { deleteTriangle, getSingleTriangle } from '../../../app/reducers/circleSlice'
 import { baseURL } from '../../../base/config'
+import Loading from '../../../loader/loarding'
 import './triangle.css'
 export default function TriangleDetail() {
-  const { triangle } = useSelector((store) => store.allcircles)
+  const { triangle, isLoading } = useSelector((store) => store.allcircles)
   const [option, setOption] = useState()
   const [data1, setHeight] = useState()
   const [data2, setBase] = useState()
@@ -38,6 +40,9 @@ export default function TriangleDetail() {
       window.location.reload()
       return response.data
     })
+  }
+  if(isLoading){
+    return <Loading/>
   }
   if (option === 'perimeter') {
     return (
@@ -103,6 +108,9 @@ export default function TriangleDetail() {
           <button className='inputs others' onClick={handleUpdate}>Update</button>
         <FontAwesomeIcon className='trash' onClick={handleDelete} icon={faTrash} title='delete solution'/>
       </form>
+      <Link to={'/playground/triangles'}>
+     <FontAwesomeIcon className='back-arrow' icon={faArrowAltCircleLeft}/>
+     </Link>
       </div>
     )
   }
@@ -164,7 +172,10 @@ export default function TriangleDetail() {
           </select>
           <button className='inputs others' onClick={handleUpdate}>Update</button>
         <FontAwesomeIcon className='trash' onClick={handleDelete} icon={faTrash} title='delete solution'/>
-      </form>
+      </form>  
+      <Link to={'/playground/triangles'}>
+     <FontAwesomeIcon className='back-arrow' icon={faArrowAltCircleLeft}/>
+     </Link>
   </div>
   )
 }

@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom'
 import './cube.css'
 import {getCubes, createCube } from '../../../app/reducers/circleSlice'
 import { faArrowAltCircleLeft, faCube } from '@fortawesome/free-solid-svg-icons'
+import Loading from '../../../loader/loarding'
 export default function Cube() {
-  const { cubes } = useSelector((store) => store.allcircles)
+  const { cubes, isLoading } = useSelector((store) => store.allcircles)
   const [data1, setHeight] = useState()
   const [data2, setWidth] = useState()
   const [name, setName] = useState()
@@ -27,6 +28,9 @@ export default function Cube() {
   })).then(() => {
     window.location.reload()
   })
+ }
+ if(isLoading){
+  return <Loading/>
  }
   return (
 <div className='cube'>

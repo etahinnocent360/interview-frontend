@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom'
 import './square.css'
 import { getSquare, createSquare } from '../../../app/reducers/circleSlice'
 import { faArrowAltCircleLeft } from '@fortawesome/sharp-solid-svg-icons'
+import Loading from '../../../loader/loarding'
 export default function Square() {
-  const { squares} = useSelector((store) => store.allcircles)
+  const { squares, isLoading} = useSelector((store) => store.allcircles)
   const [data1, setHeight] = useState()
   const [data2, setWidth] = useState()
   const [name, setName] = useState()
@@ -29,6 +30,9 @@ console.log(squares,'form component')
   })).then(() => {
     window.location.reload()
   })
+ }
+ if(isLoading){
+  return <Loading/>
  }
   return (
 <div className='new-square'>

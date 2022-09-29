@@ -8,6 +8,7 @@ import axios from 'axios'
 import { baseURL } from '../../../base/config'
 import {faTrash, faArrowAltCircleLeft } from '@fortawesome/sharp-solid-svg-icons'
 import { faCube } from '@fortawesome/free-solid-svg-icons'
+import Loading from '../../../loader/loarding'
 
 
 export default function CubeDetail() {
@@ -17,7 +18,7 @@ export default function CubeDetail() {
     const [name, setName] = useState()
     const [units, setUnits] = useState()
     const dispatch = useDispatch()
-    const {cube} = useSelector((store) =>store.allcircles)
+    const {cube, isLoading} = useSelector((store) =>store.allcircles)
     const width = Number(data2)
     const height = Number(data1)
     const {id} = useParams()
@@ -40,7 +41,9 @@ export default function CubeDetail() {
             window.location.reload()
         })
     }
-
+if(isLoading){
+  return <Loading/>
+}
 if(option === 'perimeter'){
     return(
         <div className='cube'>   
