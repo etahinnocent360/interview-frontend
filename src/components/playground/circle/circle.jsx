@@ -27,7 +27,9 @@ export default function Circle() {
       units,
       name,
       radius
-    }))
+    })).then(() =>{
+      window.location.reload()
+    })
   }
   // console.log(circle, 'new circle')
 
