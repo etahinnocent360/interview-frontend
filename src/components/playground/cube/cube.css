@@ -34,3 +34,55 @@ span{
     border: 1px solid #db3400;
 
 }
+
+.cube .form {
+    border: 1px solid #db3400;
+    height: auto;
+}
+
+.cube .form .inputs{
+    border: 1px solid #db3400;
+}
+
+.cube .result{
+    border: 1px solid #db3400;
+}
+.cube .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cube .inputs{
+    border: 1px solid #db3400;
+}
+.cube .answer{
+    border: 1px solid #db3400;
+    outline: none;
+}
+
+.cube .shift{
+    margin-left: 30px;
+}
+.cube .top .shift{
+    margin-left: 20px;
+}
+
+.cube .cards{
+    border: 1px solid #db3400;
+    height: auto;
+}
+
+.cube .detail{
+    width: 68%;
+    height: auto;
+}
+
+.cube .detail .trash{
+    margin-left: 30%;
+    margin-top: 5%;
+    cursor: pointer;
+    color: rgb(243, 74, 74);
+}
+.cube button{
+    cursor: pointer;
+}

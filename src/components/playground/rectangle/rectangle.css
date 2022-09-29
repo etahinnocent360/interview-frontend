@@ -34,3 +34,45 @@ span{
     border: 1px solid #9900ab;
 
 }
+
+.new-rectangle .form{
+    border:1px solid #9900ab;
+    height: auto;
+}
+.new-rectangle .form .inputs{
+    border:1px solid #9900ab;
+}
+
+.new-rectangle .result{
+    border:1px solid #9900ab;
+}
+.rectangle .cards{
+    border:1px solid #9900ab;
+    height: auto;
+}
+.rectangle .shift{
+    margin-left: 30px;
+}
+.rectangle .detail{
+    width: 68%;
+    border:1px solid #9900ab;
+    height: auto;
+}
+.rectangle .detail .inputs{
+    border:1px solid #9900ab;
+}
+.rectangle .detail .trash{
+    color: rgb(240, 93, 93);
+    margin-left: 30%;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.rectangle button{
+    cursor: pointer;
+}
+
+.rectangle .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

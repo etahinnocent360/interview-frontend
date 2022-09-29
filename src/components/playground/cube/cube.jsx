@@ -2,12 +2,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import './rectangle.css'
-import { getRectangles, createRectangle } from '../../../app/reducers/circleSlice'
-import { faRectangle } from '@fortawesome/sharp-solid-svg-icons'
-import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
-export default function Rectangle() {
-  const { rectangles} = useSelector((store) => store.allcircles)
+import './cube.css'
+import {getCubes, createCube } from '../../../app/reducers/circleSlice'
+import { faArrowAltCircleLeft, faCube } from '@fortawesome/free-solid-svg-icons'
+export default function Cube() {
+  const { cubes } = useSelector((store) => store.allcircles)
   const [data1, setHeight] = useState()
   const [data2, setWidth] = useState()
   const [name, setName] = useState()
@@ -15,13 +14,12 @@ export default function Rectangle() {
   const height = Number(data1)
   const width = Number(data2)
   const dispatch = useDispatch()
-console.log(rectangles,'form component')
   useEffect(() => {
-    dispatch(getRectangles(rectangles))
+    dispatch(getCubes(cubes))
   }, [dispatch])
- const newRectangle = (e) =>{
+ const newCube = (e) =>{
   e.preventDefault()
-  dispatch(createRectangle({
+  dispatch(createCube({
     height,
     name,
     width,
@@ -31,7 +29,7 @@ console.log(rectangles,'form component')
   })
  }
   return (
-<div className='new-rectangle'>
+<div className='cube'>
 <div className='create'>
       <form action="" className='form'>
         <input className='inputs numbers' value={data1} placeholder='Enter the hieght eg 47' type="number" onChange={(e) => setHeight(e.target.value)} />
@@ -47,12 +45,12 @@ console.log(rectangles,'form component')
             <option >mm</option>
             <option >km</option>
           </select>
-        <button className='inputs others' onClick={newRectangle}>Submit</button>
+        <button className='inputs others' onClick={newCube}>Submit</button>
       </form>
       <div action="" className='result'>
-          {rectangles?.map((rectangle) => (
-            <Link to={`/playground/rectangles/${rectangle.id}`} className='result-cat' key={rectangle.id}>
-              <FontAwesomeIcon className='awesome' title='click me' size='7x' color='#9900ab' icon={faRectangle}></FontAwesomeIcon>
+          {cubes?.map((cube) => (
+            <Link to={`/playground/cube/${cube.id}`} className='result-cat' key={cube.id}>
+              <FontAwesomeIcon className='awesome' title='click me' size='7x' color='#db3400' icon={faCube}></FontAwesomeIcon>
             </Link>
           ))}
         

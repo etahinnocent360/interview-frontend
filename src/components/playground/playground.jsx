@@ -1,3 +1,4 @@
+import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { Link } from 'react-router-dom'
@@ -8,7 +9,7 @@ export default function PlayLanding() {
     <div className='play'>
       <h1 style={{textAlign:'center', marginTop:'30px'}}>Lets Play Together</h1>
       <div className='flex-items'>
-    <Link to={'/playground/triangle-detail'} style={{color:'black'}} className="cards card1">
+    <Link to={'/playground/triangles'} style={{color:'black'}} className="cards card1">
     <div  title='Click me'>
           <div className="headers">
             <div className="numbering one">
@@ -56,7 +57,7 @@ export default function PlayLanding() {
           </div>
         </div>
       </Link>
-        <Link to={'/playground/cube'}  style={{color:'black'}}  className="cards card4">
+        <Link to={'/playground/cubes'}  style={{color:'black'}}  className="cards card4">
         <div  title='Click me'>
           <div className="headers">
             <div className="numbering four">
@@ -72,7 +73,7 @@ export default function PlayLanding() {
           </div>
         </div>
         </Link>
-       <Link to={'/playground/rectangle-details'}  style={{color:'black'}}  className="cards card5">
+       <Link to={'/playground/rectangle'}  style={{color:'black'}}  className="cards card5">
        <div title='Click me'>
           <div className="headers">
             <div className="numbering five">
@@ -89,8 +90,9 @@ export default function PlayLanding() {
         </div>
        </Link>
       </div>
-      <i className='fa fa-circle'></i>
-      <FontAwesomeIcon style={{backgroundColor:'red'}} icon="fa-brands fa-twitter" />
+      <Link to={'/'}>
+     <FontAwesomeIcon className='back-arrow' icon={faArrowAltCircleLeft}/>
+     </Link>
     </div>
   )
 }

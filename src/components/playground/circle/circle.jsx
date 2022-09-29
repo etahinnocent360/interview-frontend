@@ -7,9 +7,11 @@ import Loading from '../../../loader/loarding'
 import { faCircleO } from '@fortawesome/sharp-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import './circle.css'
+import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons'
 
 
 export default function Circle() {
+  
   const [units, setUnits] = useState()
   const [name, setName] = useState()
   const [data, setData] = useState()
@@ -63,6 +65,9 @@ export default function Circle() {
           ))}
         </div>
       </div>
+      <Link to={'/playground'}>
+     <FontAwesomeIcon className='back-arrow' icon={faArrowAltCircleLeft}/>
+     </Link>
     </div>
   )
 }

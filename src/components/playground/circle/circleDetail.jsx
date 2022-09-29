@@ -1,10 +1,11 @@
+import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPi, faTrash } from '@fortawesome/sharp-solid-svg-icons'
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { getSingleCircle, deleteCircle} from '../../../app/reducers/circleSlice'
 import { baseURL } from '../../../base/config'
 import Loading from '../../../loader/loarding'
@@ -95,6 +96,9 @@ export default function CircleDetails() {
         <button className='inputs others' onClick={handleUpdate}>Update</button>
         <FontAwesomeIcon className='trash' onClick={handleDelete} icon={faTrash} title='delete solution'/>
       </form>
+      <Link to={'/playground/circles'}>
+     <FontAwesomeIcon className='back-arrow' icon={faArrowAltCircleLeft}/>
+     </Link>
       </div>
     )
   }
@@ -156,7 +160,9 @@ export default function CircleDetails() {
         <button className='inputs others' onClick={handleUpdate}>Update</button>
         <FontAwesomeIcon className='trash' onClick={handleDelete} icon={faTrash} title='delete solution'/>
       </form>
-
+      <Link to={'/playground/cubes'}>
+     <FontAwesomeIcon className='back-arrow' icon={faArrowAltCircleLeft}/>
+     </Link>
     </div>
   )
 }

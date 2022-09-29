@@ -7,7 +7,7 @@
 
 .triangle .cards {
     flex-grow: .2;
-    height: 14rem;
+    height: auto;
     width: 70%;
     background-color: white;
     border-radius: 5px;
@@ -16,10 +16,14 @@
 .triangle .top{
     flex-grow: .2;
     width: 70%;
+    display: flex;
+    justify-content: space-between;
     border-radius: 5px;
     margin: 5px auto;
 }
-
+.triangle .top .right{
+   margin-top: 70px;
+}
 .triangle .answer {
     border: 1px solid #009fba;
     height: 30px;
@@ -40,4 +44,29 @@ span{
 .triangle .card3 {
     border: 1px solid #009fba;
 
+}
+
+.triangle .form{
+    height: auto;
+    border: 2px solid #009fba;
+}
+.triangle .inputs{
+    border: 2px solid #009fba;
+}
+.triangle .result{
+    border: 1px solid #009fba;
+}
+
+.triangle .detail{
+    width: 68%;
+    border: 1px solid #009fba;
+}
+.triangle .trash{
+    margin-left: 30%;
+    margin-top: 5%;
+    color: rgb(241, 92, 92);
+    cursor: pointer;
+}
+.triangle button{
+    cursor: pointer;
 }

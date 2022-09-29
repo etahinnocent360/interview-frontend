@@ -134,3 +134,12 @@ img {
       margin-top: 2rem;
   }
 }
+
+.back-arrow{
+  color: #9900ab;
+  margin-left: 170px;
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}

@@ -1,6 +1,6 @@
 .square .cards {
     flex-grow: .2;
-    height: 14rem;
+    height: auto;
     width: 70%;
     background-color: white;
     border-radius: 5px;
@@ -9,8 +9,13 @@
 .square .top{
     flex-grow: .2;
     width: 70%;
+    display: flex;
+    justify-content: space-between;
     border-radius: 5px;
     margin: 5px auto;
+}
+.square .top .right{
+    margin-top: 60px;
 }
 
 .square .answer {
@@ -32,6 +37,10 @@ span{
 
 .square .card3 {
     border: 1px solid #f39a00;
+
+}
+.square .card3 .shift{
+    margin-left: 30px;
 
 }
 .new-square .create{
@@ -93,3 +102,19 @@ span{
     border: 2px solid #f39a003b;
 }
 
+.new-square .numbers{
+    width: 20rem;
+}
+.square .detail{
+    width: 68%;
+    height: auto;
+}
+.square button{
+    cursor: pointer;
+}
+.square .detail .trash{
+    margin-top: 5%;
+    margin-left: 30%;
+    color: rgb(247, 76, 76);
+    cursor: pointer;
+}
