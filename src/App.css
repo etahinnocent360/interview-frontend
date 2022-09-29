@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -34,5 +34,74 @@
   }
   to {
     transform: rotate(360deg);
+  }
+} */
+body{
+  overflow-x: hidden;
+}
+
+/* link to font awesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+
+/* to use font awesome as your content in ::after or ::before */
+selector::before {
+	content: "\unicode"; /* you can get unicode from the website*/
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; /* solid => 900 , regular => 400*/
+}
+
+/* loading status */
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.308);
+}
+.wave {
+  width: 5px;
+  height: 100px;
+  background: linear-gradient(45deg, cyan, #fff);
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px;
+}
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
   }
 }

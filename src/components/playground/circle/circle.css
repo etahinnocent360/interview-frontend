@@ -1,0 +1,141 @@
+.circle .cards {
+    flex-grow: .2;
+    height: 14rem;
+    width: 70%;
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px auto;
+}
+.circle .top{
+    flex-grow: .2;
+    width: 70%;
+    border-radius: 5px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.circle .answer {
+    border: 1px solid #00c31b;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+}
+.circle .select {
+    margin-top: 60px;
+    width: 100px;
+    background-color: white;
+}
+
+span{
+    margin-left: 5px;
+}
+.circle .top h4{
+    color: #00c31b;
+}
+.circle .answer:focus {
+    border: 1px solid #00c31b;
+
+}
+
+.circle .card3 {
+    border: 1px solid #00c31b;
+    line-height: 1.5;
+
+}
+.circle .cards3a {
+    line-height: 1;
+
+}
+circle .cards .new{
+    padding-left: 50px;
+}
+.circle-new .create{
+    background-image: url('../../../../public/img/cd5.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.circle-new .form{
+    background-color: white;
+    height: 100px;
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.096);
+    border-radius: 10px;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    border: 2px solid #00c31a85
+}
+.circle-new .form .inputs{
+    height: 30px;
+    border: 2px solid #00c31a88;
+    outline: none;
+    border-radius: 3px;   
+    margin: 30px 17px;
+    overflow-y: auto;
+}
+.circle-new .form .numbers{
+    width: 25rem;
+    
+}
+.circle-new .form .others{
+    width: 8rem;
+    height: 35px;
+}
+
+@media (max-width: 1000px){
+    .circle-new  .form {
+        background-color: white;
+        height: auto;
+    }
+    .circle-new  .form .inputs{
+        margin: 20px auto;
+    }
+}
+
+.circle-new .result{
+    background-color: white;
+    height: 70vh;
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.096);
+    border-radius: 10px;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    border: 2px solid #00c31a85;
+    justify-content: space-evenly;
+    overflow-y: auto;
+}
+.result-cat{
+    margin-top: 10px;
+}
+
+
+.awesome{
+    /* color: #51d462ab; */
+    cursor: pointer;
+}
+.awesome:hover{
+   transform: scale(1.1);
+}
+
+.circle .detail{
+    width: 68%;
+    border:1px solid #00c31a9f;
+}
+.circle .detail .numbers{
+    width: 20rem;
+    border:1px solid #00c31a9f;
+}
+.circle .detail .others{
+    border:1px solid #00c31a9f;
+}
+.circle .detail .trash{
+    margin-top: 40px;
+    color: rgb(243, 73, 73);
+    cursor: pointer;
+}

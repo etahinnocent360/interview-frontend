@@ -1,0 +1,104 @@
+.play{
+    background-image: url('../../../public/img/cd5.jpg');
+}
+
+.flex-items {
+    height: 80vh;
+    width: 90%;
+    display: flex;
+    margin: 10px auto;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.flex-items .cards {
+    flex-grow: .2;
+    height: 14rem;
+    width: 23rem;
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+.flex-items .cards .bottom{
+    text-align: left;
+    margin-left: 40px;
+}
+
+
+.flex-items .card1 {
+    border: 1px solid #009fba;
+
+}
+
+.flex-items .card2 {
+    border: 1px solid #f39a00;
+
+}
+
+.flex-items .card3 {
+    border: 1px solid #00c31b;
+
+}
+
+.flex-items .card4 {
+    border: 1px solid #db3400;
+
+}
+
+.flex-items .card5 {
+    border: 1px solid #9900ab;
+
+}
+
+.flex-items .cards .headers {
+    height: 10vh;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+}
+
+.flex-items .cards .headers p {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.flex-items .cards .numbering {
+    height: 40px;
+    width: 50px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.flex-items .cards .describe {
+    width: 80%;
+    margin: 10px auto;
+    text-align: left;
+}
+
+.flex-items .cards .numbering h4 {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+.flex-items .cards .one {
+    background-color: #009fba;
+}
+
+.flex-items .cards .two {
+    background-color: #f39a00;
+}
+
+.flex-items .cards .three {
+    background-color: #00c31b;
+}
+
+.flex-items .cards .four {
+    background-color: #db3400;
+}
+
+.flex-items .cards .five {
+    background-color: #9900ab;
+}

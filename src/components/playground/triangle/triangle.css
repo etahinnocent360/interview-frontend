@@ -1,0 +1,43 @@
+.triangle{
+    background-image: url('../../../../public/img/cd5.jpg');
+    object-fit: contain;
+    background-repeat: no-repeat;
+}
+
+
+.triangle .cards {
+    flex-grow: .2;
+    height: 14rem;
+    width: 70%;
+    background-color: white;
+    border-radius: 5px;
+    margin: 5px auto;
+}
+.triangle .top{
+    flex-grow: .2;
+    width: 70%;
+    border-radius: 5px;
+    margin: 5px auto;
+}
+
+.triangle .answer {
+    border: 1px solid #009fba;
+    height: 30px;
+    border-radius: 5px;
+}
+
+span{
+    margin-left: 5px;
+}
+.triangle .top h4{
+    color: #009fba;
+}
+.triangle .answer:focus {
+    border: 1px solid #009fba;
+
+}
+
+.triangle .card3 {
+    border: 1px solid #009fba;
+
+}
