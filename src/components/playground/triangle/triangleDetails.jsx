@@ -1,6 +1,6 @@
 import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPi, faTrash, faTriangle } from '@fortawesome/sharp-solid-svg-icons'
+import { faTrash, faTriangle } from '@fortawesome/sharp-solid-svg-icons'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -27,6 +27,7 @@ export default function TriangleDetail() {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getSingleTriangle(id))
+     // eslint-disable-next-line
   }, [id])
   const handleDelete = () => {
     dispatch(deleteTriangle(id)).then(() =>{

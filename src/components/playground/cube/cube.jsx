@@ -17,6 +17,7 @@ export default function Cube() {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getCubes(cubes))
+     // eslint-disable-next-line
   }, [dispatch])
  const newCube = (e) =>{
   e.preventDefault()

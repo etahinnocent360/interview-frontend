@@ -19,6 +19,7 @@ export default function Rectangle() {
 console.log(rectangles,'form component')
   useEffect(() => {
     dispatch(getRectangles(rectangles))
+     // eslint-disable-next-line
   }, [dispatch])
  const newRectangle = (e) =>{
   e.preventDefault()

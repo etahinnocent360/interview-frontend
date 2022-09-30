@@ -24,6 +24,7 @@ export default function SquareDetail() {
     const {id} = useParams()
     useEffect(() =>{
         dispatch(getSingleSquare(id))
+         // eslint-disable-next-line
     },[id])
     const handleDelete = (() => {
         dispatch(deleteSquare(id)).then(() => {

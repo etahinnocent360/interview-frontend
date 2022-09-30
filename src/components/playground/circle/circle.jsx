@@ -21,6 +21,7 @@ export default function Circle() {
   console.log(name)
   useEffect(() => {
     dispatch(getCircles(circles))
+     // eslint-disable-next-line
   }, [dispatch])
 
   const newCircle = (e) => {

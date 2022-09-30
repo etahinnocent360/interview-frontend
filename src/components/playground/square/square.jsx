@@ -19,6 +19,7 @@ export default function Square() {
 console.log(squares,'form component')
   useEffect(() => {
     dispatch(getSquare(squares))
+     // eslint-disable-next-line
   }, [dispatch])
  const newSquare = (e) =>{
   e.preventDefault()

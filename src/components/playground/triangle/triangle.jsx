@@ -4,7 +4,7 @@ import { faTriangle } from '@fortawesome/sharp-solid-svg-icons'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { createTriangle, getSquare, getTriangles } from '../../../app/reducers/circleSlice'
+import { createTriangle, getTriangles } from '../../../app/reducers/circleSlice'
 import Loading from '../../../loader/loarding'
 
 export default function Triangle() {
@@ -22,6 +22,7 @@ export default function Triangle() {
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(getTriangles(triangles))
+         // eslint-disable-next-line
       }, [dispatch])
     const newTriangle = (e) =>{
         e.preventDefault()

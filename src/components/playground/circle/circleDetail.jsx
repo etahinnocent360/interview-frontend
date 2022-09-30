@@ -19,8 +19,10 @@ export default function CircleDetails() {
   const { id } = useParams()
   const[radius, setRadius] = useState()
   const dispatch = useDispatch()
+ 
   useEffect(() => {
     dispatch(getSingleCircle(id))
+     // eslint-disable-next-line
   }, [id])
   if (isLoading) {
     return <Loading />

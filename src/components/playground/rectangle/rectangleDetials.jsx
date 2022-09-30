@@ -24,6 +24,7 @@ export default function RectangleDetails() {
     const { id } = useParams()
     useEffect(() => {
         dispatch(getSingleRectangle(id))
+         // eslint-disable-next-line
     }, [id])
     const handleDelete = (() => {
         dispatch(deleteRectangle(id)).then(() => {

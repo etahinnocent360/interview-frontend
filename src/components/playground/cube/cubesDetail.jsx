@@ -24,6 +24,7 @@ export default function CubeDetail() {
     const {id} = useParams()
     useEffect(() =>{
         dispatch(getSingleCube(id))
+         // eslint-disable-next-line
     },[id])
     const handleDelete = (() => {
         dispatch(deleteCube(id)).then(() => {
