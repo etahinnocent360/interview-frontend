@@ -16,8 +16,8 @@ export default function CircleDetails() {
   const [option, setOption] = useState()
   const [units, setUnits] = useState()
   const [name, setName] = useState()
-  const [data, setData] = useState()
   const { id } = useParams()
+  const[radius, setRadius] = useState()
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getSingleCircle(id))
@@ -33,7 +33,7 @@ export default function CircleDetails() {
 
   const handleUpdate = (e) =>{
     e.preventDefault()
-    axios.put(`${baseURL}/circle/${id}`, {name, units, radius:circle.radius}).then((response) =>{
+    axios.put(`${baseURL}/circle/${id}`, {name, units, radius}).then((response) =>{
       window.location.reload()
       return response.data
     })
@@ -81,7 +81,7 @@ export default function CircleDetails() {
           <p style={{ marginLeft: '30px' }}>the perimeter is {circle.perimeter}{circle.units}</p>
         </div>
         <form action="" className='form detail'>
-        <input className='inputs numbers' value={circle.radius} onChange={(e) => setData(e.target.value)} placeholder='Enter the radius eg 47' type="number" />
+        <input className='inputs numbers' value={radius} onChange={(e) => setRadius(e.target.value)} placeholder='Enter the radius eg 47' type="number" />
         <select className='inputs others' value={name} onChange={(e) => setName(e.target.value)} name="" id="">
           <option >area</option>
           <option >perimeter</option>
@@ -145,7 +145,7 @@ export default function CircleDetails() {
         <p style={{ marginLeft: '30px' }}>the area is {circle.area}{circle.units}^2</p>
       </div>
       <form action="" className='form detail'>
-        <input className='inputs numbers' value={circle.radius} onChange={(e) => setData(e.target.value)} placeholder='Enter the radius eg 47' type="number" />
+        <input className='inputs numbers' value={radius} onChange={(e) => setRadius(e.target.value)} placeholder='Enter the radius eg 47' type="number" />
         <select className='inputs others' value={name} onChange={(e) => setName(e.target.value)} name="" id="">
           <option >area</option>
           <option >perimeter</option>
