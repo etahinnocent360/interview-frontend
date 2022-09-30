@@ -20,7 +20,6 @@ export default function SquareDetail() {
     const {square, isLoading} = useSelector((store) =>store.allcircles)
     const width = Number(data2)
     const height = Number(data1)
-    console.log(square,'ddsdsd')
     const {id} = useParams()
     useEffect(() =>{
         dispatch(getSingleSquare(id))

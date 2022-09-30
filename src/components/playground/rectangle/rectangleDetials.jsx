@@ -20,7 +20,6 @@ export default function RectangleDetails() {
     const { rectangle, isLoading } = useSelector((store) => store.allcircles)
     const width = Number(data2)
     const height = Number(data1)
-    console.log(rectangle, 'ddsdsd')
     const { id } = useParams()
     useEffect(() => {
         dispatch(getSingleRectangle(id))

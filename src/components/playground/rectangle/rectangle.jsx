@@ -16,7 +16,6 @@ export default function Rectangle() {
   const height = Number(data1)
   const width = Number(data2)
   const dispatch = useDispatch()
-console.log(rectangles,'form component')
   useEffect(() => {
     dispatch(getRectangles(rectangles))
      // eslint-disable-next-line

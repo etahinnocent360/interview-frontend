@@ -176,7 +176,7 @@ export const getCircles = createAsyncThunk(
             const newResponse = axios.get(`${baseURL}/circle/circles`)
             return (await newResponse).data
         } catch (error) {
-
+            throw new error(error)
         }
     }
 )
@@ -185,10 +185,8 @@ export const getSingleCircle = createAsyncThunk(
     async (id) => {
         try {
             const newResponse = axios.get(`${baseURL}/circle/${id}`)
-            console.log((await newResponse).data, 'square data')
             return (await newResponse).data
         } catch (error) {
-            console.log(error)
             throw new error(error)
         }
     }
@@ -198,11 +196,9 @@ export const createCircle = createAsyncThunk(
     async (data) => {
         try {
             const newResponse = (await axios.post(`${baseURL}/circle`, data))
-            console.log(data, 'is')
-            console.log(newResponse.data, 'data')
             return newResponse.data
         } catch (error) {
-
+            throw new error(error)
         }
     }
 )
@@ -211,10 +207,8 @@ export const deleteCircle = createAsyncThunk(
     async (id) => {
         try {
             const newResponse = axios.delete(`${baseURL}/circle/${id}`)
-            console.log((await newResponse).data)
             return (await newResponse).data
         } catch (error) {
-            console.log(error)
             throw new error(error)
         }
     }
@@ -228,7 +222,7 @@ export const getSquare = createAsyncThunk(
             const newResponse = axios.get(`${baseURL}/square/squares`)
             return (await newResponse).data
         } catch (error) {
-
+            throw new error(error)
         }
     }
 )
@@ -237,7 +231,6 @@ export const getSingleSquare = createAsyncThunk(
     async (id) => {
         try {
             const newResponse = axios.get(`${baseURL}/square/${id}`)
-            // console.log((await newResponse).data)
             return (await newResponse).data
         } catch (error) {
             console.log(error)
@@ -250,11 +243,9 @@ export const createSquare = createAsyncThunk(
     async (data) => {
         try {
             const newResponse = (await axios.post(`${baseURL}/square`, data))
-            console.log(data, 'is')
-            console.log(newResponse.data, 'data')
             return newResponse
         } catch (error) {
-
+            throw new error(error)
         }
     }
 )
@@ -263,7 +254,6 @@ export const deleteSquare = createAsyncThunk(
     async (id) => {
         try {
             const newResponse = axios.delete(`${baseURL}/square/${id}`)
-            console.log((await newResponse).data)
             return (await newResponse).data
         } catch (error) {
             console.log(error)
@@ -288,7 +278,6 @@ export const getSingleCube = createAsyncThunk(
     async (id) => {
         try {
             const newResponse = axios.get(`${baseURL}/cube/${id}`)
-            console.log((await newResponse).data)
             return (await newResponse).data
         } catch (error) {
             console.log(error)
@@ -301,8 +290,6 @@ export const createCube = createAsyncThunk(
     async (data) => {
         try {
             const newResponse = (await axios.post(`${baseURL}/cube`, data))
-            console.log(data, 'is')
-            console.log(newResponse.data, 'data')
             return newResponse.data
         } catch (error) {
 
@@ -314,7 +301,6 @@ export const deleteCube = createAsyncThunk(
     async (id) => {
         try {
             const newResponse = axios.delete(`${baseURL}/cube/${id}`)
-            console.log((await newResponse).data)
             return (await newResponse).data
         } catch (error) {
             console.log(error)
@@ -331,7 +317,7 @@ export const getTriangles = createAsyncThunk(
             const newResponse = axios.get(`${baseURL}/triangle/triangles`)
             return (await newResponse).data
         } catch (error) {
-
+            throw new error(error)
         }
     }
 )
@@ -340,7 +326,6 @@ export const getSingleTriangle = createAsyncThunk(
     async (id) => {
         try {
             const newResponse = axios.get(`${baseURL}/triangle/${id}`)
-            console.log((await newResponse).data)
             return (await newResponse).data
         } catch (error) {
             console.log(error)
@@ -353,8 +338,6 @@ export const createTriangle = createAsyncThunk(
     async (data) => {
         try {
             const newResponse = (await axios.post(`${baseURL}/triangle`, data))
-            console.log(data, 'is')
-            console.log(newResponse.data, 'data')
             return newResponse.data
         } catch (error) {
 
@@ -366,7 +349,6 @@ export const deleteTriangle = createAsyncThunk(
     async (id) => {
         try {
             const newResponse = axios.delete(`${baseURL}/triangle/${id}`)
-            console.log((await newResponse).data)
             return (await newResponse).data
         } catch (error) {
             console.log(error)
@@ -385,7 +367,7 @@ export const getRectangles = createAsyncThunk(
             const newResponse = axios.get(`${baseURL}/rectangle/rectangles`)
             return (await newResponse).data
         } catch (error) {
-
+            throw new error(error)
         }
     }
 )
@@ -394,7 +376,6 @@ export const getSingleRectangle = createAsyncThunk(
     async (id) => {
         try {
             const newResponse = axios.get(`${baseURL}/rectangle/${id}`)
-            console.log((await newResponse).data)
             return (await newResponse).data
         } catch (error) {
             console.log(error)
@@ -407,11 +388,9 @@ export const createRectangle = createAsyncThunk(
     async (data) => {
         try {
             const newResponse = (await axios.post(`${baseURL}/rectangle`, data))
-            console.log(data, 'is')
-            console.log(newResponse.data, 'data')
             return newResponse.data
         } catch (error) {
-
+            throw new error(error)
         }
     }
 )
@@ -420,7 +399,6 @@ export const deleteRectangle = createAsyncThunk(
     async (id) => {
         try {
             const newResponse = axios.delete(`${baseURL}/rectangle/${id}`)
-            console.log((await newResponse).data)
             return (await newResponse).data
         } catch (error) {
             console.log(error)

@@ -16,7 +16,6 @@ export default function Square() {
   const height = Number(data1)
   const width = Number(data2)
   const dispatch = useDispatch()
-console.log(squares,'form component')
   useEffect(() => {
     dispatch(getSquare(squares))
      // eslint-disable-next-line

@@ -18,7 +18,6 @@ export default function Circle() {
   const radius = Number(data)
   const { circles, isLoading} = useSelector((store) => store.allcircles)
   const dispatch = useDispatch()
-  console.log(name)
   useEffect(() => {
     dispatch(getCircles(circles))
      // eslint-disable-next-line
